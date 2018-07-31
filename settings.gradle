@@ -1,1 +1,9 @@
-include  ':ios', ':android', ':common'
+include ':common'
+include ':ios'
+// include ':android'
+
+def localProperties = new Properties()
+def localPropertiesFile = file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader { localProperties.load(it) }
+}

@@ -33,9 +33,8 @@ Modules using the common library should add expectedBy to their application leve
 
 ### iOS Framework
 
-iOS is built using a custom run script in the target's Build Phase that activates
-gradle's build process and copies the needed framework to the project files in Xcode
-
+iOS is built using a custom run script in the target's framework Build Phase that activates
+gradle's build process and compiles the needed framework files to the project files in Xcode
 
 
 ###Pitfalls
@@ -44,4 +43,10 @@ gradle's build process and copies the needed framework to the project files in X
 * Requires Gradle 4.6+
 * Kotlin multiplatform projects are somewhat finnicky to create (especially in AS)
 * No real IDE support yet except for AppCode and CLion or Kotlin Native outside of gradle plugin
+* iOS is unnatural folder structure. Has to be created within the root project (/root/ios/project.pbxproj). Manual manipulation may be required
+
+### Gotchas
+
+* Kotlin Konan plugin defaults to /src/main/kotlin. Srcdir will need to be set if this is not the case for the common module.
+
 
