@@ -1,6 +1,6 @@
 include ':common'
 include ':ios'
-// include ':android'
+ include ':android'
 
 def localProperties = new Properties()
 def localPropertiesFile = file('local.properties')
