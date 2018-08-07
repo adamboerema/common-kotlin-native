@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
-import commonkotlin.adamboerema.com.common.add
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val textView = findViewById<TextView>(R.id.textView)
-        textView.text = add(x = 6, y = 4).toString()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
